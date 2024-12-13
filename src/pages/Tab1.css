@@ -1,0 +1,112 @@
+.level-indicator {
+    display: flex;
+    align-items: flex-end;
+    height: 20px;
+    width: 100%;
+    gap: 4px;
+  }
+  
+  .level-bar {
+    /* flex: 1; */
+    height: 15px;
+    width: 4px; 
+    background-color: #ccc;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  /* .level-item {
+    display: flex;
+    flex-direction: row; 
+    gap: 8px;
+  } */
+  
+  .level-indicator-container {
+    flex: 1;
+    margin-left: 0; /* No margin for mobile */
+  }
+  
+  /* Responsive layout for larger screens */
+  @media (min-width: 768px) {
+    /* .level-item {
+      flex-direction: row; 
+      align-items: center;
+    } */
+  
+    .level-indicator-container {
+      margin-left: 16px; /* Add space for desktop */
+    }
+  }
+  .ion-btn-selection-view{
+    text-align: left;
+  }
+
+.btn-wrapper{
+    display: flex;
+}
+@media only screen and (min-device-width: 786px) {
+    .level-item{
+        display: flex !important;
+        /* flex-direction: column !important; */
+        justify-content: space-between;
+    }
+    /* For portrait layouts only */
+  }
+  .tab-selector-container {
+    display: flex;
+    justify-content: center;
+    padding: 16px;
+    background-color: white; /* Match container background */
+  }
+  
+  .custom-segment {
+    --background: #e0efff; /* No background for the segment */
+    --indicator-color: #e0efff; /* Hide default segment indicator */
+    --button-background: #e0efff; /* Default button background */
+    --button-background-checked: white; /* Background of selected button */
+    --button-color: #007bff; /* Default button text color */
+    --button-color-checked: #007bff; /* Text color of selected button */
+    --border-radius: 8px; /* Rounded edges */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Add border around the segment */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    --ripple-color: white;
+    --color-checked:transparent !important;
+  }
+  
+  .custom-segment-button {
+    font-size: 14px; /* Adjust font size */
+    font-weight: 500; /* Slightly bold text */
+    color: inherit; /* Use inherited color settings */
+    padding: 6px 16px; /* Add padding for better spacing */
+  }
+  
+  /* ion-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+  
+  .custom-segment ion-segment-button {
+    border-radius: 4px; /* Rounded corners for individual buttons */
+  }
+  
+  .custom-segment ion-segment-button:not(.segment-button-checked) {
+    background-color: transparent; /* Transparent background for unselected */
+  }
+  
+  .custom-segment ion-segment-button.segment-button-checked {
+    background-color: white; /* Highlight selected button */
+  }
+  .custom-segment-button.with-divider::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 60%; /* Adjust height to match visual expectation */
+    width: 1px; /* Line width */
+    background-color: rgba(0, 0, 0, 0.2); /* Line color */
+  }
+  
+  .custom-segment-button:last-child.with-divider::after {
+    display: none; /* Remove divider from the last button */
+  }
